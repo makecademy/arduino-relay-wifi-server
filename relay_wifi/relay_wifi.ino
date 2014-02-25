@@ -25,8 +25,8 @@ const unsigned long
 uint32_t t;
 
 // WiFi network (change with your settings !)
-#define WLAN_SSID       "FreeboxS"       // cannot be longer than 32 characters!
-#define WLAN_PASS       "billylechat"
+#define WLAN_SSID       "yourNetwork"       // cannot be longer than 32 characters!
+#define WLAN_PASS       "yourPassword"
 #define WLAN_SECURITY   WLAN_SEC_WPA2 // This can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 
 // What TCP port to listen on for connections.
