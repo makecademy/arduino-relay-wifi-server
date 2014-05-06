@@ -8,6 +8,7 @@
 #include <Adafruit_CC3000.h>
 #include <SPI.h>
 #include <CC3000_MDNS.h>
+#include <Ethernet.h>
 #include <aREST.h>
 
 // Define CC3000 chip pins
