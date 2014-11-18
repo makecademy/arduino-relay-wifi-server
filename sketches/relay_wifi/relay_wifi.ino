@@ -8,7 +8,6 @@
 #include <Adafruit_CC3000.h>
 #include <SPI.h>
 #include <CC3000_MDNS.h>
-#include <Ethernet.h>
 #include <aREST.h>
 
 // Define CC3000 chip pins
@@ -17,9 +16,9 @@
 #define ADAFRUIT_CC3000_CS    10
 
 // WiFi network (change with your settings !)
-#define WLAN_SSID       "yourNetwork"       // cannot be longer than 32 characters!
-#define WLAN_PASS       "yourPassword"
-#define WLAN_SECURITY   WLAN_SEC_WPA2 // This can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
+#define WLAN_SSID       "yourWiFiName"
+#define WLAN_PASS       "yourWiFiPassword"
+#define WLAN_SECURITY   WLAN_SEC_WPA2
 
 // The port to listen for incoming TCP connections 
 #define LISTEN_PORT           80
@@ -44,6 +43,10 @@ void setup() {
   
   // Initialize Serial 
   Serial.begin(115200);
+
+  // Set name & ID
+  rest.set_name("relay_control");
+  rest.set_id("1");
 
   // Define relay pin as output
   pinMode(relay_pin,OUTPUT);
