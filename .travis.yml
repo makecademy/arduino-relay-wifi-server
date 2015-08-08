@@ -13,8 +13,8 @@ install:
   - arduino --install-library "CC3000 MDNS"
   - arduino --install-library "aREST"
 script:
-  - arduino --verify --board arduino:avr:uno $PWD/examples/relay_test/relay_test.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/relay_wifi/relay_wifi.ino
+  - arduino --verify --board arduino:avr:uno $PWD/sketches/relay_test/relay_test.ino
+  - arduino --verify --board arduino:avr:uno $PWD/sketches/relay_wifi/relay_wifi.ino
 notifications:
   email:
     on_success: change
